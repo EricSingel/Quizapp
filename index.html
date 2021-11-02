@@ -5,6 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
   </head>
-  <body></body>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Quizapp</span>
+      </div>
+    </nav>
+    <div class="container">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Frage</h5>
+        <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+              1. Antwort
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">2. Antwort</button>
+            <button type="button" class="list-group-item list-group-item-action">3. Antwort</button>
+            <button type="button" class="list-group-item list-group-item-action">4. Antwort</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="question-footer card-body border"><b>1</b> von <b>5</b> Fragen <button>Nächste Frage</button></div>
+  </body>
 </html>
