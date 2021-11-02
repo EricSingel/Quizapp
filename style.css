@@ -1,4 +1,17 @@
 .question-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+}
+
+.question-footer span {
+  padding-left: 16px;
+}
+.question-footer button {
+  margin-right: 16px;
+}
+
+.container {
+  margin: 64px;
 }
