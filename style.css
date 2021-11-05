@@ -8,6 +8,10 @@
 .question-footer span {
   padding-left: 16px;
 }
+body {
+  margin: 0;
+}
+
 .question-footer button {
   margin-right: 16px;
 }
