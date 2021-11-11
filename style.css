@@ -1,6 +1,11 @@
+body {
+  height: 60vh;
+  margin: 0;
+}
+
 .question-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 4px;
 }
@@ -8,12 +13,19 @@
 .question-footer span {
   padding-left: 16px;
 }
-body {
-  margin: 0;
+
+.quadrat {
+  height: 40px;
+  width: 40px;
 }
 
 .question-footer button {
   margin-right: 16px;
+}
+
+.f-s-32px {
+  font-size: 32px;
+  font-weight: bolder;
 }
 
 .container {
@@ -40,4 +52,17 @@ body {
   100% {
     background-color: #198754;
   }
+}
+
+.progress-bar-vertical {
+  width: 20px;
+  float: left;
+  display: flex;
+  align-items: flex-end;
+}
+
+.progress-bar-vertical .progress-bar {
+  width: 100%;
+  height: 0;
+  transition: height 0.6s ease;
 }

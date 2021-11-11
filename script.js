@@ -44,12 +44,12 @@ let questions = [
 ];
 
 let currentQuestion = 0;
+let rightAnswer = 0;
 
 function init() {
   let howMuchQ = document.getElementById("howMuchQ");
 
   howMuchQ.innerHTML = questions.length;
-
   showQuestion();
 }
 
@@ -57,7 +57,15 @@ function showQuestion() {
   let question = questions[currentQuestion];
 
   if (currentQuestion >= questions.length) {
+    document.getElementById("questionScreen").style.display = "none";
+    document.getElementById("winScreen").style.display = "block";
+    document.getElementById("rightAnswers").innerHTML = rightAnswer;
+    document.getElementById("howManyQ").innerHTML = questions.length;
+    document.getElementById("progressBar").style.height = "100%";
   } else {
+    let percent = currentQuestion / questions.length;
+    percent = percent * 100;
+    document.getElementById("progressBar").style.height = percent + "%";
     document.getElementById("questionText").innerHTML = question.question;
     document.getElementById("nextButton").disabled = true;
     document.getElementById("currentQuestion").innerHTML = currentQuestion + 1;
@@ -78,6 +86,7 @@ function answer(selection) {
     setTimeout(function () {
       document.getElementById("answer" + selection).classList.add("bg-success");
     }, 2000);
+    rightAnswer++;
   } else {
     document.getElementById("answer" + selection).classList.add("right-answer");
     setTimeout(function () {

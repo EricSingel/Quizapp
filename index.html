@@ -15,56 +15,71 @@
   <body onload="init()">
     <!-- As a heading -->
     <div class="d-flex container justify-content-center h-100">
-    <nav class="navbar navbar-light bg-primary p-4">
-      <div class="container-fluid d-flex flex-column ">
-        <div class="d-flex justify-content-center align-items-center">
-        <img src="Quizapp Blue/Quizapp Blue/logo 2.png" class="bg-primary" alt="">
-      </div>
-        <nav class="nav flex-column ">
-          <a class="nav-link active text-white" href="#">Active</a>
-          <a class="nav-link text-white" href="#">Link</a>
-          <a class="nav-link text-white" href="#">Link</a>
-          <a class="nav-link text-white disabled" href="#">Disabled</a>
-        </nav>
-      </div>
-    </nav>
-    <div class="card pt-5 pb-5 px-3">
-      <div class="card-body p-0">
-        <h5 id="questionText" class="card-title pb-3">Frage</h5>
-        <div class="list-group">
-          <div class="d-flex justify-content-between">
-            <span class="m-1 p-4 bg-secondary">A</span>
-            <button onclick="answer(1)" id="answer1" type="button" class="list-group-item list-group-item-action mb-2">
-              1. Antwort
-            </button>
-          </div>  
-          <div class="d-flex justify-content-between">
-            <span class="">B</span>
-            <button onclick="answer(2)" id="answer2" type="button" class="list-group-item list-group-item-action mb-2">
-              2. Antwort
-            </button>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>C</span>
-            <button onclick="answer(3)" id="answer3" type="button" class="list-group-item list-group-item-action mb-2">
-              3. Antwort
-            </button>
-          </div>
-          <div class="d-flex justify-content-between">
-            <span>D</span>
-              <button onclick="answer(4)" id="answer4" type="button" class="list-group-item list-group-item-action">
-              4. Antwort
-            </button>
-          </div>
-      </div>
-    </div>
+      <nav class="navbar navbar-light bg-primary p-4">
+        <div class="container-fluid d-flex flex-column justify-content-evenly h-100">
+          <div class="d-flex justify-content-center align-items-center">
+          <img src="Quizapp Blue/Quizapp Blue/logo 2.png" class="bg-primary" alt="">
+        </div>
+          <nav class="nav flex-column ">
+            <a class="nav-link active text-white" href="#">Active</a>
+            <a class="nav-link text-white" href="#">Link</a>
+            <a class="nav-link text-white" href="#">Link</a>
+            <a class="nav-link text-white disabled" href="#">Disabled</a>
+          </nav>
+        </div>
+      </nav>
 
-    <div class="question-footer card-body border">
-      <span><b id="currentQuestion"></b> von <b id="howMuchQ"></b> Fragen</span> 
-      <button onclick="nextQuestion()" disabled id="nextButton" class="btn btn-success">
-        Nächste Frage
-      </button>
+      <!-- Progressbar  -->
+      <div class="progress h-100">
+        <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-vertical bg-info" role="progressbar" style="height: 20%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+
+      <!-- Winscreen -->
+      <div id="winScreen" class="card-body p-0 bg-light" style="display: none;">
+        <div class="h-100 d-flex flex-column align-items-center justify-content-center">
+          <img src="Quizapp Blue/Quizapp Blue/Group 5.png" alt="Win">
+          <h1>Glückwunsch!</h1>
+          <span>Du hast <b id="rightAnswers"></b> von <b id="howManyQ"></b> richtig beantwortet!</span>
+        </div>
+        </div>
+
+      <div id="questionScreen" class="card pt-5 pb-5 px-3 bg-light">
+        <div class="card-body p-0 bg-light d-flex justify-content-center align-items-center flex-column">
+          <h5 id="questionText" class="card-title pb-3 mx-4">Frage</h5>
+          <div class="list-group mt-4">
+            <div class="d-flex justify-content-between bg-white mx-4 mb-2">
+              <span class="m-1 quadrat text-center d-flex align-items-center justify-content-center bg-secondary text-white f-s-32px">A</span>
+              <button onclick="answer(1)" id="answer1" type="button" class="list-group-item list-group-item-action border-0">
+                1. Antwort
+              </button>
+            </div>  
+            <div class="d-flex justify-content-between bg-white mx-4 mb-2">
+              <span class="m-1 quadrat text-center d-flex align-items-center justify-content-center bg-secondary text-white f-s-32px">B</span>
+              <button onclick="answer(2)" id="answer2" type="button" class="list-group-item list-group-item-action border-0">
+                2. Antwort
+              </button>
+            </div>
+            <div class="d-flex justify-content-between bg-white mx-4 mb-2">
+              <span class="m-1 quadrat text-center d-flex align-items-center justify-content-center bg-secondary text-white f-s-32px">C</span>
+              <button onclick="answer(3)" id="answer3" type="button" class="list-group-item list-group-item-action border-0">
+                3. Antwort
+              </button>
+            </div>
+            <div class="d-flex justify-content-between bg-white mx-4 mb-2">
+              <span class="m-1 quadrat text-center d-flex align-items-center justify-content-center bg-secondary text-white f-s-32px">D</span>
+                <button onclick="answer(4)" id="answer4" type="button" class="list-group-item list-group-item-action border-0">
+                4. Antwort
+              </button>
+            </div>
+        </div>
+      </div>
+
+      <div class="question-footer card-body bg-light">
+        <span><b id="currentQuestion"></b> von <b id="howMuchQ"></b> Fragen</span> 
+        <button onclick="nextQuestion()" disabled id="nextButton" class="btn btn-success">
+          Nächste Frage
+        </button>
+      </div>
     </div>
-  </div>
   </body>
 </html>
