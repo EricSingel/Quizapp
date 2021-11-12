@@ -58,11 +58,20 @@ body {
   width: 20px;
   float: left;
   display: flex;
+  transition: height 225ms ease-in;
   align-items: flex-end;
 }
 
 .progress-bar-vertical .progress-bar {
   width: 100%;
   height: 0;
-  transition: height 0.6s ease;
+}
+
+.progress {
+  border-radius: 0px !important;
+  min-width: 20px;
+}
+.card {
+  border-radius: 0px !important;
+  min-width: 800px !important;
 }
